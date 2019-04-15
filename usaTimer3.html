@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+   <html>
+    <head>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Внешний долг США</title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <style>
+            body {
+            background-image: url('https://i.ytimg.com/vi/ZjIyIfN3LyU/maxresdefault.jpg');
+             background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-color: #464646;
+            }
+            
+            .container {
+                margin-top: 240px;
+            }
+            
+            .see {
+                background-color: gainsboro;
+                color: red;
+                border-radius: 10px 10px 10px 10px;
+                font-size: 15px;
+                font-weight: 800;
+                padding: 10px;
+                text-align: center;
+                border: 1px solid red;
+            }
+            
+            
+       .radius {
+           background-color: gainsboro;
+           color: red;
+           border-radius: 10px 10px 10px 10px;
+           font-size: 20px;
+           font-weight: 800;
+           padding: 12px;
+           text-align: center;
+           border: 1px solid red;
+   }  
+        </style>
+    </head>
+    <body>
+         <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="see">ВНЕШНИЙ ДОЛГ США</div>
+            <div class="radius">$
+            </div>
+            </div>
+        </div>
+            <script>
+                 function init()
+            {
+                sec = 19252128599992;
+                setInterval(tick, 50);
+                if (sessionStorage.getItem('autosave')) {
+                    sec = parseInt(sessionStorage.getItem("autosave"));
+                    }
+                    else {
+                    sec =19252128599992; 
+                    }   
+            }
+            function tick()
+            {
+                var r = Math.ceil(Math.random() * (2000000 - 1000000) + 1000000);
+                sec = sec + r;
+                sessionStorage.setItem("autosave", sec);
+                $('.radius').html(sec)
+            }
+                $(init);      
+        </script>
+            <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+к
+            <!-- Optional theme -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+            <!-- Latest compiled and minified JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
